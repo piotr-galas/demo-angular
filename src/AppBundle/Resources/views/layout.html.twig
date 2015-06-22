@@ -1,8 +1,28 @@
+{% set angular = false %}
+{% for type in app.request.getAcceptableContentTypes %}
+    {% if type == 'text/html' %}
+        {% set angular = 1 %}
+    {% endif %}
+{% endfor %}
+
+{% if angular == 1 %}
+    {% extends '::base.html.twig' %}
+
+    {% block stylesheets %}
+        <link rel="stylesheet" href="{{ asset('bundles/pigaangular/bower_components/bootstrap/dist/css/bootstrap.css') }}">
+    {% endblock %}
+
+{% endif %}
+
+{% block body %}
 <h1>main layout</h1>
 
 
-<p>Urls</p>
-
+<p>Static Urls </p>
+<p>Code of top of the layout.html.twig is little complicated and I will fix it. Code above chec if it is angural routing or normal routing.
+If it is normal then add extending base html and bootstrap css file</p>
+<p>Url below are defined in normal symfony way.</p>
+ for example &lt;a href="[[ path('first_demo') ]]"&gt;First route&lt;/a&gt;      &nbsp;&nbsp;&nbsp;&nbsp;----> replce '[' with '{' because it deifficult to render braces in twig
 <ul>
     <li><a href="{{ path('first_demo') }}">First route</a></li>
     <li><a href="{{ path('second_demo') }}">Second route</a></li>
@@ -12,7 +32,22 @@
 
 </ul>
 
+<p>Url below are defined based on route defined above but also there are add to js config and to app.js.
+Look at 'app/config/config.yml' and 'src/AppBundle/Resources/public/js/app.js'
+</p>
+<p>Dynami angular url</p>
+    <ul>
+        <li><a href="{{ path('angular_base_path') }}#/first_demo">First route</a></li>
+        <li><a href="{{ path('angular_base_path') }}#/second_demo">Second route</a></li>
+        <li><a href="{{ path('angular_base_path') }}#/third_demo">Third route</a></li>
+        <li><a href="{{ path('angular_base_path') }}#/fourth_demo">Fourth route</a></li>
+        <li><a href="{{ path('angular_base_path') }}#/fifth_demo">Fifth route</a></li>
+    </ul>
 
-{% block some_content %}
+    {% block some_content %}
+    {% endblock %}
+
 {% endblock %}
+
+
 

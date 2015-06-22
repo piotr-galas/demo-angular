@@ -18,8 +18,29 @@ symfonyApp.config(['$routeProvider',
                 templateUrl: Routing.generate('homepage'),
                 controller: 'DemoCtrl'
             }).
+            when('/first_demo',{
+                templateUrl: Routing.generate('first_demo'),
+                controller: 'DemoCtrl'
+            }).
+            when('/second_demo',{
+                templateUrl: Routing.generate('second_demo'),
+                controller: 'DemoCtrl'
+            }).
+            when('/third_demo',{
+                templateUrl: Routing.generate('third_demo'),
+                controller: 'DemoCtrl'
+            }).
+            when('/fourth_demo',{
+                templateUrl: Routing.generate('fourth_demo'),
+                controller: 'DemoCtrl'
+            }).
+            when('/fifth_demo',{
+                templateUrl: Routing.generate('fifth_demo'),
+                controller: 'DemoCtrl'
+            }).
             otherwise({
                 redirectTo: '/angular_demo'
             });
     }]);
+
 
