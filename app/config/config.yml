@@ -78,3 +78,10 @@ swiftmailer:
     username:  "%mailer_user%"
     password:  "%mailer_password%"
     spool:     { type: memory }
+
+piga_angular:
+     base_angular_view: AppBundle:Angular:index.html.twig
+
+fos_js_routing:
+   routes_to_expose:
+       - homepage

@@ -1,3 +1,10 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+app_bundle:
+    resource: "@AppBundle/Resources/config/routing.yml"
+
+piga_angular:
+    resource: "@PigaAngularBundle/Resources/config/routing.yml"
+

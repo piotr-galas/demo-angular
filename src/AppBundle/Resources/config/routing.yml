@@ -1,0 +1,3 @@
+first_demo:
+    pattern: /first
+    defaults: { _controller: AppBundle:Demo:first}
