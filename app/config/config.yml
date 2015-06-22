@@ -85,3 +85,8 @@ piga_angular:
 fos_js_routing:
    routes_to_expose:
        - homepage
+       - first_demo
+       - second_demo
+       - third_demo
+       - fourth_demo
+       - fifth_demo
