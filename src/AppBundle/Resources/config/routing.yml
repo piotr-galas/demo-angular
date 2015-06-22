@@ -17,3 +17,7 @@ fourth_demo:
 fifth_demo:
     pattern: /fifth
     defaults: { _controller: AppBundle:Demo:fifth}
+
+index_demo:
+    pattern: /
+    defaults: { _controller: AppBundle:Demo:index}

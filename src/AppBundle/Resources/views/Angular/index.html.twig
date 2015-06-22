@@ -5,6 +5,12 @@
     <script src="{{ asset('bundles/app/js/controllers.js') }}"></script>
 {% endblock %}
 
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('bundles/pigaangular/bower_components/bootstrap/dist/css/bootstrap.css') }}">
+    <link rel="stylesheet" href="{{ asset('bundles/app/css/app.css') }}">
+{% endblock %}
+
 {% block body %}
     <div class="body" ng-app="apka">
         <div class="container">
