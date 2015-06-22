@@ -1,3 +1,19 @@
 first_demo:
     pattern: /first
     defaults: { _controller: AppBundle:Demo:first}
+
+second_demo:
+    pattern: /second
+    defaults: { _controller: AppBundle:Demo:second}
+
+third_demo:
+    pattern: /third
+    defaults: { _controller: AppBundle:Demo:third}
+
+fourth_demo:
+    pattern: /fourth
+    defaults: { _controller: AppBundle:Demo:fourth}
+
+fifth_demo:
+    pattern: /fifth
+    defaults: { _controller: AppBundle:Demo:fifth}
